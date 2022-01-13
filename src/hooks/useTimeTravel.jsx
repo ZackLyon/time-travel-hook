@@ -16,5 +16,13 @@ export default function useTimeTravel() {
     setCurrent(current + 1);
   };
 
-  return { current, dates, save };
+  const undo = () => {
+    setCurrent(current - 1);
+  };
+
+  const redo = () => {
+    setCurrent(current + 1);
+  };
+
+  return { current, dates, save, undo, redo };
 }
