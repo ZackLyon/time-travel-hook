@@ -1,0 +1,36 @@
+.appPage {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.appPage > * {
+  margin: 1vh;
+  position: relative;
+  top: 10vh;
+  height: 50px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.dateInput,
+.dateDisplay {
+  color: rgb(4, 31, 89);
+  background-color: white;
+  font-size: 2rem;
+  padding: 0.4rem;
+  text-align: center;
+  border: none;
+  box-shadow: 0 0 20px rgb(27, 20, 17);
+}
+
+.buttonBox {
+  display: flex;
+  justify-content: space-around;
+}

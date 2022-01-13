@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button {
+  height: 50px;
+  width: 30%;
+  color: black;
+
+  background: radial-gradient(
+    rgb(243, 196, 125) 20%,
+    rgb(244, 132, 18) 60%,
+    rgb(214, 46, 28) 100%
+  );
+  border: none;
+  border-radius: 5px;
+}
+
+button:disabled {
+  background: radial-gradient(
+    rgba(243, 196, 125, 0.5) 20%,
+    rgba(244, 132, 18, 0.5) 60%,
+    rgba(214, 46, 28, 0.5) 100%
+  );
+}
