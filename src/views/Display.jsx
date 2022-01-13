@@ -1,5 +1,5 @@
-import { useEffect } from 'react';
 import useTimeTravel from '../hooks/useTimeTravel.jsx';
+import './Display.css';
 
 export default function Display() {
   const { current, dates, save, undo, redo } = useTimeTravel();
@@ -8,15 +8,26 @@ export default function Display() {
 
   return (
     <div>
-      <input type="date" value={currentDate} onChange={(e) => save(e)} />
+      <input
+        type="date"
+        aria-label="date-input"
+        value={currentDate}
+        onChange={(e) => save(e)}
+      />
 
-      <div>{dates[0] ? dates[current] : 'Please select a date'}</div>
+      <section aria-label="date-display">
+        {dates[0] ? dates[current] : 'Please select a date'}
+      </section>
 
-      <button onClick={undo} disabled={current <= 0}>
+      <button aria-label="undo-button" onClick={undo} disabled={current <= 0}>
         Undo
       </button>
 
-      <button onClick={redo} disabled={current >= dates.length - 1}>
+      <button
+        aria-label="redo-button"
+        onClick={redo}
+        disabled={current >= dates.length - 1}
+      >
         Redo
       </button>
     </div>
